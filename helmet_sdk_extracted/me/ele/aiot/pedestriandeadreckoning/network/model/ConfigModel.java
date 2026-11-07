@@ -1,0 +1,56 @@
+package me.ele.aiot.pedestriandeadreckoning.network.model;
+
+import androidx.annotation.NonNull;
+import com.alibaba.surgeon.bridge.ISurgeon;
+import com.alibaba.surgeon.instrument.InstrumentAPI;
+import com.google.gson.annotations.SerializedName;
+import java.io.Serializable;
+import java.util.List;
+
+/* loaded from: classes4.dex */
+public class ConfigModel implements Serializable {
+    private static transient /* synthetic */ ISurgeon $surgeonFlag;
+
+    @SerializedName("retailer")
+    private List<FenceModel> retailer;
+
+    @SerializedName("user")
+    private List<FenceModel> user;
+
+    public List<FenceModel> getRetailer() {
+        ISurgeon iSurgeon = $surgeonFlag;
+        return InstrumentAPI.support(iSurgeon, "1") ? (List) iSurgeon.surgeon$dispatch("1", new Object[]{this}) : this.retailer;
+    }
+
+    public List<FenceModel> getUser() {
+        ISurgeon iSurgeon = $surgeonFlag;
+        return InstrumentAPI.support(iSurgeon, "3") ? (List) iSurgeon.surgeon$dispatch("3", new Object[]{this}) : this.user;
+    }
+
+    public void setRetailer(List<FenceModel> list) {
+        ISurgeon iSurgeon = $surgeonFlag;
+        if (InstrumentAPI.support(iSurgeon, "2")) {
+            iSurgeon.surgeon$dispatch("2", new Object[]{this, list});
+        } else {
+            this.retailer = list;
+        }
+    }
+
+    public void setUser(List<FenceModel> list) {
+        ISurgeon iSurgeon = $surgeonFlag;
+        if (InstrumentAPI.support(iSurgeon, "4")) {
+            iSurgeon.surgeon$dispatch("4", new Object[]{this, list});
+        } else {
+            this.user = list;
+        }
+    }
+
+    @NonNull
+    public String toString() {
+        ISurgeon iSurgeon = $surgeonFlag;
+        if (InstrumentAPI.support(iSurgeon, "5")) {
+            return (String) iSurgeon.surgeon$dispatch("5", new Object[]{this});
+        }
+        return "ConfigModel{retailer=" + this.retailer + ", user=" + this.user + '}';
+    }
+}

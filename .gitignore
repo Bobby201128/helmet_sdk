@@ -1,0 +1,8 @@
+# 原始 APK（209MB，超出 GitHub 100MB 单文件限制，且为专有二进制）
+crowdsource.apk
+
+# 全量解包与全量反编译输出（622MB / 4.3 万文件，含整个 App 的专有代码）
+work/
+
+# 第三方反编译工具
+tools/
